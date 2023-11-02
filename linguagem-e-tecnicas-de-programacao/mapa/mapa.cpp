@@ -27,8 +27,8 @@ void cadastrarAtendimento(struct Atendimento atendimentos[], int *totaldeAtendim
     printf("Escolha o setor do atendimento: \n");
     printf("1 - Abertura de Conta \n");
     printf("2 - Caixa \n");
-    printf("3 - Gerente Pessoa Física \n");
-    printf("4 - Gerente Pessoa Jurídica \n");
+    printf("3 - Gerente Pessoa FÃ­sica \n");
+    printf("4 - Gerente Pessoa JurÃ­dica \n");
     printf("Resp:");
     scanf("%d", &respMenu);
     fflush(stdin);
@@ -75,7 +75,7 @@ void listarPorSetor(struct  Atendimento atendimentos[], int *totalDeAtendimentos
     printf("1 - Abertura de Conta \n");
     printf("2 - Caixa \n");
     printf("3 - Gerente Pessoa Física \n");
-    printf("4 - Gerente Pessoa Jurídica \n");
+    printf("4 - Gerente Pessoa Jurí­dica \n");
     printf("Resp:");
     scanf("%d", &respMenu);
     fflush(stdin);
@@ -118,7 +118,7 @@ void listarPorSetor(struct  Atendimento atendimentos[], int *totalDeAtendimentos
             break;
         case 3:
         	system("cls");
-        	printf("===Lista de Atendimentos - Gerente Pessoa F�sica===\n");
+        	printf("===Lista de Atendimentos - Gerente Pessoa Física===\n");
             for(int i = 0; i < *totalDeAtendimentos; i++) {
                 if(strcmp(atendimentos[i].setor, "Gerente Pessoa Física") == 0){
                     printf("Nome: %s", atendimentos[i].nome);
@@ -136,7 +136,7 @@ void listarPorSetor(struct  Atendimento atendimentos[], int *totalDeAtendimentos
             break;
         case 4:
         	system("cls");
-        	printf("===Lista de Atendimentos - Gerente Pessoa Jur�dica===\n");
+        	printf("===Lista de Atendimentos - Gerente Pessoa Jurídica===\n");
             for(int i = 0; i < *totalDeAtendimentos; i++) {
                 if(strcmp(atendimentos[i].setor, "Gerente Pessoa Jurídica") == 0){
                     printf("Nome: %s", atendimentos[i].nome);
@@ -198,7 +198,7 @@ int main() {
                 rodandoMenu = false;
                 break;
             default:
-                printf("Opção inválida");
+                printf("Opção inválida.");
                 break;
         }
     }
